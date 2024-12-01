@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "7f085600-8883-44ac-b59f-ab67446eedc3",
+		"name": "Test MSIG Nando",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2818318"
+	},
+	"item": [
+		{
+			"name": "[ GET ] Teacher ALL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8081/api/teachers"
+			},
+			"response": []
+		},
+		{
+			"name": "[ GET ] Teacher By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8081/api/teachers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "[ POST ] Create Teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ridwan Dadu\",\r\n  \"subject\": \"Futsal\",\r\n  \"experience\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/api/teachers"
+			},
+			"response": []
+		},
+		{
+			"name": "[ PUT ] Update Teacher",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ridwan Mungil\",\r\n  \"subject\": \"Baseball\",\r\n  \"experience\": 12\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/api/teachers/4"
+			},
+			"response": []
+		},
+		{
+			"name": "[ GET ] Teacher Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/api/teachers/report"
+			},
+			"response": []
+		},
+		{
+			"name": "[ DELETE ] Teacher By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8081/api/teachers/4"
+			},
+			"response": []
+		},
+		{
+			"name": "[ GET ]  Teacher and Sum Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8082/api/students/1/teacher"
+			},
+			"response": []
+		},
+		{
+			"name": "[ GET ] All Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8082/api/students"
+			},
+			"response": []
+		},
+		{
+			"name": "[ GET ] Student By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8082/api/students/1"
+			},
+			"response": []
+		},
+		{
+			"name": "[ POST ] Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Miaww\",\r\n    \"age\": 15,\r\n    \"grade\": \"10th\",\r\n    \"teacherId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8082/api/students"
+			},
+			"response": []
+		},
+		{
+			"name": "[ PUT ] Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Miaww 2\",\r\n    \"age\": 15,\r\n    \"grade\": \"10th\",\r\n    \"teacherId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8082/api/students/5"
+			},
+			"response": []
+		},
+		{
+			"name": "[ DELETE ] Student By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8082/api/students/5"
+			},
+			"response": []
+		}
+	]
+}

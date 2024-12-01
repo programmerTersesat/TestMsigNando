@@ -1,0 +1,39 @@
+
+
+Script table in Postgre Sql:
+
+- Teacher
+================================================
+-- public.teacher definition
+
+-- Drop table
+
+-- DROP TABLE public.teacher;
+
+CREATE TABLE public.teacher (
+	id bigserial NOT NULL,
+	"name" varchar(255) NOT NULL,
+	subject varchar(255) NOT NULL,
+	experience int4 NOT NULL,
+	CONSTRAINT teacher_pkey PRIMARY KEY (id)
+);
+================================================
+
+
+- Student 
+================================================
+-- public.student definition
+
+-- Drop table
+
+-- DROP TABLE public.student;
+
+CREATE TABLE public.student (
+	id bigserial NOT NULL,
+	"name" varchar(255) NOT NULL,
+	age int4 NOT NULL,
+	grade varchar(255) NOT NULL,
+	teacher_id int8 NULL,
+	CONSTRAINT student_pkey PRIMARY KEY (id)
+);
+================================================
